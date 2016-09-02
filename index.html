@@ -25,12 +25,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<div style="float:right; width:60%">
-					<img src="imgs/git-logo.png" width="40%" height="40%">
-					<img src="imgs/github-logo.png" width="40%" height="40%">
-					</div>
-					
-					<h2>Introduction to<br/>Git  & GitHub </h2><br/>
+					<h2>Introduction to <span style="color:#f05033;">Git</span>  & <span style="color:#79dbf2;">GitHub</span></h2><br/>
 						
 					<p>Vicky Steeves | DATE </p>
 
@@ -49,15 +44,180 @@
 				</section>
 				
 				<section>
-					<h2>Version Control Basics</h2>
+					<h2>1st Thing: Git != GitHub</h2>
 					
+					<div style="float:left; width:45%">
+						<img src="imgs/git-logo.png" width="48%" height="48%">
+						<p><span style="color:#f05033;">Git</span> is a revision control system, a tool to manage your source code history. It is strictly a command-line tool.</p>
+					</div>
 					
+					<div style="float:right; width:45%">
+						<img src="imgs/github-logo.png" width="40%" height="40%">
+						<p><span style="color:#79dbf2;">GitHub</span> is a website where you can upload a copy of your Git repository. It offers all of the functionality of Git as well as adding its own features.</p>
+					</div>
 					
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
 				</section>
+				
+				<!--start nest-->
+				<section>
+				<section>
+					<h2>What is Version Control?</h2><br/>
+					
+					<p>From <a href="https://en.wikipedia.org/wiki/Version_control">Wikipedia</a>: "the management of changes to documents, computer programs, large web sites, and other collections of information."</p>
+					
+					<p>Basically, it's a way for us to compare, restore, and merge changes to our stuff.</p>
+									
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Why Version Control?</h2>
+					
+					<p>To avoid this:</p>
+					
+					<img src="imgs/final-doc.jpg" width="40%" height="40%" align="middle">
+									
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things!
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Where do we see version control?</h2>
+					
+					<p>If you've collaborated via Google Docs, Sheets, or Slides, you have used version control!</p>
+									
+					<img src="imgs/google-version.png" width="22%" height="22%" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things!
+					</aside>
+				</section>				
+				</section>
+				<!-- end nest -->
+				
+				<!--start nest-->
+				<section>
+				<section>
+					<h2>Basic Git Overview</h2>
+					
+					<p>The purpose of Git is to manage a project, or a set of files, as they change over time. Git stores this information in a data structure called a <span style="color:#f05033;">repository</span>.</p>
+					
+					<p>A git repository contains, among other things, the following:</p>
+						<ul>
+							<li>Objects (code, text, whatever) you want to track</li>
+							<li>References to these objects, called heads</li>
+						</ul>
+
+					<p>The git repository is a hidden sub-folder in your project folder, called .git. You probably won't have to touch this ever.</p>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
+					</aside>
+				</section>
+					
+				<section>
+					<h2>How Git Does Version Control</h2>
+					
+					<p>Git doesn’t store the file every time you save it, just a link to the previous identical file it has already stored; like a stream of snapshots:</p>
+					
+					<img src="imgs/git-snapshots.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things!
+					</aside>
+				</section>
+					
+				<section>
+					<h2>How Git Does Version Control</h2>
+					
+					<p>There are 3 states that your objects can be in:</p>
+					
+					<img src="imgs/git-stages.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>
+					
+				<section>
+					<h2>How Git Does Version Control</h2>
+					
+					<p>When you <em> add </em> objects, you are telling git that you made changes you want to track.</p>
+					
+					<img src="imgs/git-stages1.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>
+					
+				<section>
+					<h2>How Git Does Version Control</h2>
+					
+					<p>When you <em>commit</em> your changes, you tell Git that it is the latest version of your objects.</p>
+					
+					<img src="imgs/git-stages2.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>					
+				</section>
+				<!-- end nest -->
+				
+				<!--start nest-->
+				<section>
+				<section>
+					<h2>Let's Try It!</h2>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>
+					
+				<section>
+					<h2>Create a Folder & Repository</h2>
+					<div style="text-align:left;">
+					<p>Let's get on the command line and start!</p>
+					<ul>
+						<li>On Windows, in the start menu search, type <mark>Git Bash</mark></li>
+						<li>On Mac OSX, search <mark>terminal</mark> from spotlight search</li>
+					</ul>
+					<p>Then type the following as separate commands:</p>
+					
+					<pre><code>
+cd Desktop
+mkdir project
+cd project
+git init
+					</pre></code>
+					
+						<p>You've just created an empty Git repository!</p></div>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>	
+					
+				</section>
+				<!-- end nest -->
 				
 				<!-- CONCLUSION SLIDE -->
 				<section>
