@@ -192,9 +192,9 @@
 				</section>
 					
 				<section>
-					<h2>Create a Folder & Repository</h2>
-					<div style="text-align:left;">
-					<p>Let's get on the command line and start!</p>
+					<h2>Setting Up Git</h2>		
+					
+					<div style="text-align:left;"><p>Let's get on the command line and start!</p>
 					<ul>
 						<li>On Windows, in the start menu search, type <mark>Git Bash</mark></li>
 						<li>On Mac OSX, search <mark>terminal</mark> from spotlight search</li>
@@ -202,13 +202,14 @@
 					<p>Then type the following as separate commands:</p>
 					
 					<pre><code>
-cd Desktop
-mkdir project
-cd project
-git init
+git config --global user.name "Vicky Steeves"
+git config --global user.email "vicky.steeves@nyu.edu"
+git config --global color.ui "auto"
+git config --global core.editor "gedit"
+git config --list # lists your configurations
 					</pre></code>
 					
-						<p>You've just created an empty Git repository!</p></div>
+					<p>Where it says <mark>core.editor</mark>, put in your favourite plain text editor. This could be simply Notepad (Windows) or TextWrangler (Mac), but NOT Word.</p></div>
 					
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
@@ -216,6 +217,101 @@ git init
 					</aside>
 				</section>	
 					
+				<section>
+					<h2>Create a Folder & Repository</h2>
+
+					<div style="text-align:left;"><p>To create a blank repository, we have to create a new project folder and then initialize Git inside of it.</p>
+					<p>Type the following as separate commands in your command line:</p>
+						
+					<pre><code>
+cd Desktop 
+mkdir hello-world 
+cd hello-world 
+git init 
+					</pre></code>
+					
+					<p>You've just created an empty Git repository!</p></div>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>	
+					
+				<section>
+					<h2>Let's Track a File</h2>
+					
+					<ol>
+						<li>Open your text editor from before.</li>
+						<li>Type out: <em>hi there everyone, I am learning Git because I rock.</em></li>
+						<li>Save this file as <mark>hi.txt</mark> in your <mark>hello-world</mark> folder.</li>
+						<li>Go back to the command line.</li>
+					</ol>
+					
+					<p>Type the following as separate commands:</p>
+					
+					<pre><code>
+git add hi.txt
+git status
+					</pre></code>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>	
+					
+				<section>
+					<h2>Adding our Text File</h2>
+					
+					<p>You should get something like looks like this:</p>
+										
+					<img src="imgs/git-add-status.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>		
+					
+				<section>
+					<h2>Committing our Text File</h2>
+					
+					<p>Let's commit this so Git knows this is our first draft!</p>
+					
+					<pre><code>
+git commit -m "first draft"
+git status
+					</pre></code>
+					
+					<p>You should get something like looks like this:</p>
+										
+					<img src="imgs/git-commit-status.png" align="middle">
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>
+					
+				<section>
+					<h2>Now try it on your own!</h2><br/>
+					
+					<ol>
+						<li>Create a new text file in your <mark>hello-world</mark> folder called <mark>bye.txt</mark></li>
+						<li>Type something in it.</li>
+						<li>Add it and commit it.</li>
+						<li>Raise your blue stickie note to show you've finished!</li>
+					</ol>
+			
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>	
+				
+								
 				</section>
 				<!-- end nest -->
 				
