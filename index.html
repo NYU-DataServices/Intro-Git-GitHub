@@ -25,7 +25,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>Introduction to <span style="color:#f05033;">Git</span>  & <span style="color:#79dbf2;">GitHub</span></h2><br/>
+					<h2>Introduction to <strong><span style="color:#f05033;">Git</span></strong>  & <span style="color:#79dbf2;">GitHub</span></h2><br/>
 						
 					<p>Vicky Steeves | DATE </p>
 
@@ -298,8 +298,7 @@ git status
 					<h2>Now try it on your own!</h2><br/>
 					
 					<ol>
-						<li>Create a new text file in your <mark>hello-world</mark> folder called <mark>bye.txt</mark></li>
-						<li>Type something in it.</li>
+						<li>Modify the text file in your <mark>hello-world</mark> folder.</li>
 						<li>Add it and commit it.</li>
 						<li>Raise your blue stickie note to show you've finished!</li>
 					</ol>
@@ -309,33 +308,99 @@ git status
 					<aside class="notes">
 						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
 					</aside>
-				</section>	
-				
-								
+				</section>								
 				</section>
 				<!-- end nest -->
 				
-				<!-- CONCLUSION SLIDE -->
+				<!-- nest -->
 				<section>
-					<h2>Thank you! Questions?</h2><br/>
+				<section>
+					<h2>Viewing Revision History</h2>
 					
-					<p>Email me: <a href="mailto:vicky.steeves@nyu.edu">vicky.steeves@nyu.edu</a></p>
-					<p>Learn more about RDM: <a href="http://guides.nyu.edu/data_management">guides.nyu.edu/data_management</a></p>
+					<div style="text-align:left;"><p>To review what you've been up to, type this in the terminal:</p>
+					
+					<pre><code>
+git log
+					</pre></code>
+					
+					<p>This will list your commits with their IDs, date/time of commit, and commit messages. If you want to only look at the changes to a specific file, enter this command in the terminal:</p>
+				
+					<pre><code>
+git diff hi.txt
+					</pre></code>
+					
+					<p>This will do the same as above, at a file-specific level.</p></div>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Viewing Different Commits</h2>
+					
+					<p>Remember that weird number from <mark>git log</mark> with the commits? The first 7 characters of this ID number is referred to as the HEAD. You can view historys of objects this way too. Type in the terminal:</p>
+					
+					<pre><code>
+git diff 7a9209f # first 7 characters
+					</pre></code>
+					
+					<p>This brings a history of everything since that version.</p>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>
+				</section>
+				<!-- end nest -->
 
-					<p>Get this presentation: <a href="http://guides.nyu.edu/data_management/resources">guides.nyu.edu/data_management/resources</a></p>
-					<p>Make an appointment: <a href="http://guides.nyu.edu/appointment">guides.nyu.edu/appointment</a></p>
+				<section>
+					<h2>Rewriting History</h2>
 					
-					<div class='footer'>
-						<hr/>
-						<p>Vicky's ORCID: <a href="orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a> | Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
-						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
-					</div>
+					<p>The same 7 characters from before can be used to revert to an earlier version, using the command below:</p>
+					
+					<pre><code>
+git checkout HEAD objectname
+					</pre></code>
+					
+					<p><mark>checkout</mark> is used to tell git to revert the object back the version listed.</p>
 				
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
 					</aside>
 				</section>
+												
+				<section>
+					<h2>Exercise</h2>
+					
+					<p>Now let's try viewing and rewriting history!</p>
+					
+					<ol>
+						<li>Overwrite hi.txt | <a href="#/4/3">[4.3]</a> - <a href="#/4/5">[4.5]</a></li>
+						<li>Revert to the first saved version of ht.txt | <a href="#/5/">[5.0]</a></li>
+						<li>Switch back to the most recent version of hi.txt | <a href="#/6/">[6.0]</a></li>
+						<li>Put up your blue stickynote!</li>
+					</ol>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>	
+				
+				<section>
+					<h1>BREAK</h1><br/>
+					
+					<h2>Take 10 minutes to stretch and get water and then we'll start with <a href="github.html">GitHub!</a></h2>
+					
+					<!--SPEAKER NOTES-->
+					<aside class="notes">
+						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+					</aside>
+				</section>	
 			</div>
 		</div>
 
