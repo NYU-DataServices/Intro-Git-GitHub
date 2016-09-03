@@ -7,4 +7,4 @@ This workshop introduces the basic concepts of Git version control. Whether you'
 Git, GitHub, command line, version control.
 
 ### Thank You
-A big big thank you to [Andy Mueller](https://github.com/amueller), who originally taught this class at NYU amd taught me all I know about Git and GitHub!
+A big big thank you to [Andy Mueller](https://github.com/amueller), who originally taught this class at NYU amd taught me all I know about Git and GitHub! These slides are heavily influenced by his previous class materials, [found here](https://github.com/amueller/git_workshop).
