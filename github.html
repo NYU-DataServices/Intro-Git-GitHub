@@ -33,7 +33,7 @@
 					
 					<div class='footer'>
 						<hr/>
-						<p>Vicky's ORCID: <a href="orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a> | Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
+						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a> | Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
 						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 					</div>
 					
@@ -48,12 +48,12 @@
 					
 					<div style="float:left; width:45%">
 						<img src="imgs/git-logo.png" width="48%" height="48%">
-						<p><span style="color:#f05033;">Git</span> is a revision control system, a tool to manage your source code history. It is strictly a command-line tool.</p>
+						<p><span style="color:#f05033;">Git</span> is a revision control system, a program to manage your source code history. It is strictly a command-line tool.</p>
 					</div>
 					
 					<div style="float:right; width:45%">
 						<img src="imgs/github-logo.png" width="40%" height="40%">
-						<p><span style="color:#79dbf2;">GitHub</span> is a website where you can upload a copy of your Git repository. It offers all of the functionality of Git as well as adding its own features.</p>
+						<p><span style="color:#79dbf2;">GitHub</span> is a website where you can upload a copy of your Git repository. It allows people to collaborate via Git along with some other features.</p>
 					</div>
 					
 					<!--SPEAKER NOTES-->
@@ -65,9 +65,9 @@
                 <section>
                     <h2>Why GitHub?</h2>
                     
-                    <p>GitHub is an easy way to collaborate with others on shared git repositories. GitHub will host it for us, and we can then sync our local copies with changes made and pushed to the share one.</p>
+                    <p>GitHub is an easy way to collaborate with others on shared Git repositories. GitHub will host it for us, and we can then sync our local copies with changes made and pushed to the shared one.</p>
                     
-                    <p>It's also kind of a standard now...</p>
+                    <p>It's also the number one website for "social coding" and collaboration now...</p>
                     
                     <ol>
                         <li>SO: does everyone have a GitHub account?</li>
@@ -86,7 +86,7 @@
                  <section>
                     <h2>Two Ways to Use GitHub</h2>
                     
-                     <p>There are 2 ways that you can interact with repositories hosted on GitHub: the command line, or if you have Mac OSX and Windows, you can use <a href="https://desktop.github.com/">Desktop GitHub</a>.</p>
+                     <p>There are 2 ways that you can interact with repositories hosted on GitHub: the command line, or if you have Mac OSX and Windows, you can use <a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
                      
                      <img src="imgs/github-desktop.png">
 					
@@ -97,7 +97,7 @@
 				</section>
                 
                 <section>
-                    <h2>Creating a Central Repository</h2>
+                    <h2>Creating a Repository</h2>
                     
                     <p>When you are logged into <a href="https://github.com">github.com</a>, you should be able to see a + sign in the top right-hand corner.</p>
                     
@@ -110,7 +110,7 @@
 				</section>
                     
                <section>
-                  <h2>Creating a Central Repository</h2>
+                  <h2>Creating a Repository</h2>
                         
                      <p>Name your new repository <mark>hello-world</mark>, don't fill out anything else and hit "Create Repository":</p>
                  
@@ -125,7 +125,7 @@
                <section>
                   <h2>Make a Local Copy</h2>
                         
-                     <p>GitHub calls copying a central repository to your local computer <mark>cloning</mark>. When you make a new repository, it comes with these instructions: </p>
+                     <p>Git calls copying a remote repository to your local computer <mark>cloning</mark>. When you make a new repository, it comes with these instructions: </p>
                  
                      <img src="imgs/github-clone-repo.png" width="70%" height="70%">
                         
@@ -144,15 +144,14 @@ git clone LINK
                 <section>
                   <h2>Make a Local Copy</h2>
                         
-                    <p>Now, everything in that repository has been put onto your desktop, in the folder with the same name as the repository (in this case, <mark>hello-world</mark>).</p><br/>
-                    
-                    <p>In our case, since we already have a git repository initialized, we want to add a remote origin -- this is telling git where your repository is stored (or going to be stored, in our case!).</p>
+                  <p>In our case, since we already have a Git repository initialized, we just want to link it with the one hosted on GitHub -- this is called a <mark>remote</mark> in Git, with the default one called 'origin'.<br>
+                  So run the following:</p>
                      
                     <pre><code>
 git remote add origin LINK
                     </pre></code>
                     
-                    <p>Now, we have to PUSH all our newly added content to the remote origin.</p>
+                    <p>Now, we have to PUSH all our locally created content to the origin remote.</p>
                     
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
@@ -165,7 +164,7 @@ git remote add origin LINK
                     
                     <p>Now that we've added the link to our central repository to our local one, we have to <mark>push</mark> all our newly added content.</p>
                      
-                    <p>This adds 1 more step to what you already know how to to do:</p>
+                    <p>This adds 1 more step to what you already know how to do:</p>
                      
                     <pre><code>
 cd repository-name # navigate to your repository
@@ -188,10 +187,10 @@ git push origin master # send these changes to the central repo
                     <p>Since the joy of GitHub comes from sharing, let's discover how to collaborate on here.</p>
                     
                     <ol>
-                        <li>You and the person to uour right are now partners. People on the ends, wrap around the right.</li>
+                        <li>You and the person to your right are now partners. People on the ends, wrap around the right.</li>
                         <li>Decide who is "A" and who is "B".</li>
                         <li>You will be syncing changes ONLY to person A's repository. Don't do anything yet</li>
-                        <li>Put up the blue stickie note when you are all set!</li>
+                        <li>Put up the blue sticky note when you are all set!</li>
                     </ol>
                     
 					<!--SPEAKER NOTES-->
@@ -369,7 +368,7 @@ cd repository-name # go into your new repository
 					<ul>
 						<li><a href="https://try.github.io/levels/1/challenges/1">TryGit</a>: enter commands in-browser!</li>
 						<li><a href="http://rogerdudler.github.io/git-guide/">Git: The Simple Guide</a>: step-by-step Git tutorial</li>
-						<li><a href="http://think-like-a-git.net/">Think Like A Git</a>: for someone who’s been using Git, but doesn’t feel they really understand it.</li>
+						<li><a href="http://think-like-a-git.net/">Think Like A Git</a>: for someone who's been using Git, but doesn't feel they really understand it.</li>
 					</ul>
 					</div>
 					
@@ -400,7 +399,7 @@ cd repository-name # go into your new repository
 					
 					<div class='footer'>
 						<hr/>
-						<p>Vicky's ORCID: <a href="orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a> | Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
+						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a> | Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
 						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 					</div>
 				
