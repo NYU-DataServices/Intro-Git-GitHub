@@ -33,7 +33,7 @@
 					
 					<div class='footer'>
 						<hr/>
-						<p>Vicky's ORCID: <a href="orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a> | Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
+						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a> | Nick's ORCID: <a href="http://orcid.org/0000-0001-5512-6151">0000-0001-5512-6151</a><br/>
 						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 					</div>
 					
@@ -48,12 +48,12 @@
 					
 					<div style="float:left; width:45%">
 						<img src="imgs/git-logo.png" width="48%" height="48%">
-						<p><span style="color:#f05033;">Git</span> is a revision control system, a tool to manage your source code history. It is strictly a command-line tool.</p>
+						<p><span style="color:#f05033;">Git</span> is a revision control system, a program to manage your source code history. It is strictly a command-line tool.</p>
 					</div>
 					
 					<div style="float:right; width:45%">
 						<img src="imgs/github-logo.png" width="40%" height="40%">
-						<p><span style="color:#79dbf2;">GitHub</span> is a website where you can upload a copy of your Git repository. It offers all of the functionality of Git as well as adding its own features.</p>
+						<p><span style="color:#79dbf2;">GitHub</span> is a website where you can upload a copy of your Git repository. It allows people to collaborate via Git along with some other features.</p>
 					</div>
 					
 					<!--SPEAKER NOTES-->
@@ -104,15 +104,15 @@
 				<section>
 					<h2>Basic Git Overview</h2>
 					
-					<p>The purpose of Git is to manage a project, or a set of files, as they change over time. Git stores this information in a data structure called a <span style="color:#f05033;">repository</span>.</p>
+					<p>The purpose of Git is to manage a project, or a set of files, as it changes over time. Git stores this information in a data structure called a <span style="color:#f05033;">repository</span>.</p>
 					
-					<p>A git repository contains, among other things, the following:</p>
+					<p>A Git repository contains, among other things, the following:</p>
 						<ul>
-							<li>Objects (code, text, whatever) you want to track</li>
-							<li>References to these objects, called heads</li>
+							<li>Snapshots of your files (text, images, whatever)</li>
+							<li>References to these snapshots, called heads</li>
 						</ul>
 
-					<p>The git repository is a hidden sub-folder in your project folder, called .git. You probably won't have to touch this ever.</p>
+					<p>The Git repository is a hidden sub-folder in your project folder, called .git. You probably won't have to touch this ever.</p>
 					
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
@@ -123,7 +123,7 @@
 				<section>
 					<h2>Basic Git Overview: Branches</h2>
 
-					<p>Git works on branches, which represent independent lines of development. By default, everyone's repositories are on a "master" branch.</p>
+					<p>Git works on branches, which represent independent lines of development, as each snapshot is linked to a 'parent' one it built upon. By default, everyone's repositories are on a "master" branch.</p>
 					
 					<img src="imgs/git-branches.png" width="60%" height="60%">
 
@@ -135,18 +135,19 @@
 					</aside>
 				</section>
 					
+<!--
 				<section>
 					<h2>How Git Does Version Control</h2>
 					
-					<p>Git doesn’t store the file every time you save it, just a link to the previous identical file it has already stored; like a stream of snapshots:</p>
+					<p>Git doesn't store the file every time you save it, just a link to the previous identical file it has already stored; like a stream of snapshots:</p>
 					
 					<img src="imgs/git-snapshots.png" align="middle">
 					
-					<!--SPEAKER NOTES-->
 					<aside class="notes">
 						Avoid making a mess and losing track of things!
 					</aside>
 				</section>
+-->
 					
 				<section>
 					<h2>How Git Does Version Control</h2>
@@ -164,7 +165,7 @@
 				<section>
 					<h2>How Git Does Version Control</h2>
 					
-					<p>When you <em> add </em> objects, you are telling git that you made changes you want to track.</p>
+					<p>When you <em> add </em> objects, you are telling Git that you made changes you want to track.</p>
 					
 					<img src="imgs/git-stages1.png" align="middle">
 					
@@ -269,7 +270,7 @@ git status
 				<section>
 					<h2>Adding our Text File</h2>
 					
-					<p>You should get something like looks like this:</p>
+					<p>You should see something that looks like this:</p>
 										
 					<img src="imgs/git-add-status.png" align="middle">
 					
@@ -282,14 +283,14 @@ git status
 				<section>
 					<h2>Committing our Text File</h2>
 					
-					<p>Let's commit this so Git knows this is our first draft!</p>
+					<p>Let's commit so Git officially records this as our first draft!</p>
 					
 					<pre><code>
 git commit -m "first draft"
 git status
 					</pre></code>
 					
-					<p>You should get something like looks like this:</p>
+					<p>You should see something that looks like this:</p>
 										
 					<img src="imgs/git-commit-status.png" align="middle">
 					
@@ -324,13 +325,13 @@ git status
 git log
 					</pre></code>
 					
-					<p>This will list your commits with their IDs, date/time of commit, and commit messages. If you want to only look at the changes to a specific file, enter this command in the terminal:</p>
+					<p>This will list your commits with their IDs, date/time of creation, and commit messages. If you want to only look at the changes to a specific file, enter this command in the terminal:</p>
 				
 					<pre><code>
-git diff hi.txt
+git log hi.txt
 					</pre></code>
 					
-					<p>This will do the same as above, at a file-specific level.</p></div>
+					<p>This will list changes as before, but only those affecting this file.</p></div>
 					
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
@@ -341,13 +342,13 @@ git diff hi.txt
 				<section>
 					<h2>Viewing Different Commits</h2>
 					
-					<p>Remember that weird number from <mark>git log</mark> with the commits? The first 7 characters of this ID number is referred to as the HEAD. You can view historys of objects this way too. Type in the terminal:</p>
+					<p>Remember that weird number from <mark>git log</mark> next to commits? This unique hash allows you to refer to that version. For example, enter this in your terminal:</p>
 					
 					<pre><code>
-git diff 7a9209f # first 7 characters
+git diff 7a9209f  # first 7 characters of hash as shown before
 					</pre></code>
 					
-					<p>This brings a history of everything since that version.</p>
+					<p>This compares your current files with that previous version.</p>
 					
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
@@ -356,15 +357,15 @@ git diff 7a9209f # first 7 characters
 				</section>
 
 				<section>
-					<h2>Rewriting History</h2>
+					<h2>Using History</h2>
 					
-					<p>The same 7 characters from before can be used to revert to an earlier version, using the command below:</p>
+					<p>The same hash from before can be used to check out files from that previous version:</p>
 					
 					<pre><code>
-git checkout HEAD objectname
+git checkout HEAD filename
 					</pre></code>
 					
-					<p><mark>checkout</mark> is used to tell git to revert the object back the version listed.</p>
+					<p><mark>checkout</mark> is used to tell Git to revert files back to the version listed.</p>
 				
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
@@ -379,7 +380,7 @@ git checkout HEAD objectname
 					
 					<ol>
 						<li>Overwrite hi.txt | <a href="#/4/3">[4.3]</a> - <a href="#/4/5">[4.5]</a></li>
-						<li>Revert to the first saved version of ht.txt | <a href="#/5/">[5.0]</a></li>
+						<li>Revert to the first saved version of hi.txt | <a href="#/5/">[5.0]</a></li>
 						<li>Switch back to the most recent version of hi.txt | <a href="#/6/">[6.0]</a></li>
 						<li>Put up your blue stickynote!</li>
 					</ol>
