@@ -68,11 +68,6 @@
 					<p>From <a href="https://en.wikipedia.org/wiki/Version_control">Wikipedia</a>: "the management of changes to documents, computer programs, large web sites, and other collections of information."</p>
 					
 					<p>Basically, it's a way for us to compare, restore, and merge changes to our stuff.</p>
-									
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 				
 				<section>
@@ -81,11 +76,6 @@
 					<p>To avoid this:</p>
 					
 					<img src="imgs/final-doc.jpg" width="40%" height="40%" align="middle">
-									
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things!
-					</aside>
 				</section>
 				
 				<section>
@@ -113,11 +103,6 @@
 						</ul>
 
 					<p>The Git repository is a hidden sub-folder in your project folder, called .git. You probably won't have to touch this ever.</p>
-					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
-					</aside>
 				</section>
 					
 				<section>
@@ -128,26 +113,8 @@
 					<img src="imgs/git-branches.png" width="60%" height="60%">
 
 					<p>We won't go over this in class, but <a href="http://hades.github.io/2010/01/git-your-friend-not-foe-vol-2-branches/">this tutorial</a> (where the above img came from) and <a href="https://www.atlassian.com/git/tutorials/using-branches/">this tutorial</a> are really great.</p>
-					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Sometimes it's nice to have a new branch in a repository if you want to test a new feature but not implement until you're sure it works!
-					</aside>
 				</section>
-					
-<!--
-				<section>
-					<h2>How Git Does Version Control</h2>
-					
-					<p>Git doesn't store the file every time you save it, just a link to the previous identical file it has already stored; like a stream of snapshots:</p>
-					
-					<img src="imgs/git-snapshots.png" align="middle">
-					
-					<aside class="notes">
-						Avoid making a mess and losing track of things!
-					</aside>
-				</section>
--->
+
 					
 				<section>
 					<h2>How Git Does Version Control</h2>
@@ -155,11 +122,6 @@
 					<p>There are 3 states that your objects can be in:</p>
 					
 					<img src="imgs/git-stages.png" align="middle">
-					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
 				</section>
 					
 				<section>
@@ -168,11 +130,6 @@
 					<p>When you <em> add </em> objects, you are telling Git that you made changes you want to track.</p>
 					
 					<img src="imgs/git-stages1.png" align="middle">
-					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
 				</section>
 					
 				<section>
@@ -181,20 +138,130 @@
 					<p>When you <em>commit</em> your changes, you tell Git that it is the latest version of your objects.</p>
 					
 					<img src="imgs/git-stages2.png" align="middle">
+				</section>
+				
+				 <section>
+                    <h2>Why GitHub?</h2>
+                    
+                    <p>GitHub is an easy way to collaborate with others on shared Git repositories. GitHub will host it for us, and we can then sync our local copies with changes made and pushed to the shared one.</p>
+                    
+                    <p>It's also the number one website for "social coding" and collaboration now...</p>
+                    
+                    <ol>
+                        <li>SO: does everyone have a GitHub account?</li>
+                            <ul><li>If not, please go ahead and <a href="https://github.com/join?source=header-home">make one</a>.</li>
+                                <li>If yes, please <a href="https://github.com/login?return_to=%2Fjoin%3Fsource%3Dheader-home">sign in</a>!</li></ul>
+                    </ol>
+				</section>
+				
+				<section>
+				<h3>Forking & Pull Requests</h3>
+					
+					<p>A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.</p>
+										
+					<p>A pull request is when you want to integrate the changes you made into the original repository you forked. You describe the changes you made and make sure your changes don't conflict with the original repo's code.</p>
+					                      
+                <!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>		
+					 
+				<section>
+                    <h2>Intial Fork</h2>
+					
+					<img src="imgs/github-fork.png">
+					<img src="imgs/github-fork1.png">
+                      
+                <!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+			     <section>
+                    <h2>Creating your copy...</h2>
+					
+					<img src="imgs/github-fork2.png">
+                      
+                <!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+				<section>
+                    <h2>Now you have a copy of their repo!</h2>
+					
+					<img src="imgs/github-fork3.png">
+                      
+                <!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+					 
+				<section>
+					<h2>Follow the Same Instructions</h2><br/>					
+				
+					<p>You can edit, push, pull, add, commit, everything the same.</p>
+					
+					<p> When you want your changes to be integrated into the official repo, you make a pull request!</p>
 					
 					<!--SPEAKER NOTES-->
 					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
-				</section>					
+				</section>
+				
+			    <section>
+                    <h2>Make a Pull Request</h2>
+					
+					<img src="imgs/github-fork4.png">
+                      
+                <!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+			
+			 <section>
+                    <h2>Compare your PR to their Repo</h2>
+					
+					<img src="imgs/github-fork5.png">
+                      
+                <!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>	
+				
+			    <section>
+                    <h2>Describe Your Changes</h2>
+					
+					<img src="imgs/github-fork6.png">
+                      
+                <!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				
+			   <section>
+                    <h2>Submit the Pull Request!</h2>
+					
+					<img src="imgs/github-fork7.png">
+                      
+                <!--SPEAKER NOTES-->
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>						
 
 				<section>
 					<h2>Let's Try It!</h2>
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>
 					
 				<section>
@@ -217,10 +284,7 @@ git config --list # lists your configurations
 					
 					<p>Where it says <mark>core.editor</mark>, put in your favourite plain text editor. This could be simply Notepad (Windows) or TextWrangler (Mac), but NOT Word.</p></div>
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>	
 					
 				<section>
@@ -238,10 +302,7 @@ git init
 					
 					<p>You've just created an empty Git repository!</p></div>
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>	
 					
 				<section>
@@ -261,10 +322,7 @@ git add hi.txt
 git status
 					</pre></code>
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>	
 					
 				<section>
@@ -274,10 +332,7 @@ git status
 										
 					<img src="imgs/git-add-status.png" align="middle">
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>		
 					
 				<section>
@@ -294,10 +349,7 @@ git status
 										
 					<img src="imgs/git-commit-status.png" align="middle">
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>
 					
 				<section>
@@ -310,10 +362,7 @@ git status
 					</ol>
 			
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>								
 
 				<section>
@@ -333,10 +382,7 @@ git log hi.txt
 					
 					<p>This will list changes as before, but only those affecting this file.</p></div>
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>
 				
 				<section>
@@ -350,10 +396,7 @@ git diff 7a9209f  # first 7 characters of hash as shown before
 					
 					<p>This compares your current files with that previous version.</p>
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>
 
 				<section>
@@ -367,10 +410,7 @@ git checkout HEAD filename
 					
 					<p><mark>checkout</mark> is used to tell Git to revert files back to the version listed.</p>
 				
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					
 				</section>
 												
 				<section>
@@ -382,24 +422,47 @@ git checkout HEAD filename
 						<li>Overwrite hi.txt</li>
 						<li>Revert to the first saved version of hi.txt</li>
 						<li>Switch back to the most recent version of hi.txt</li>
-					</ol>
-					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					</ol>					
 				</section>	
 				
 				<section>
-					<h1>BREAK</h1><br/>
+          <h2>Resources For Learning More</h2>
 					
-					<h2>Take 10 minutes to stretch and get water and then we'll start with <a href="github.html">GitHub!</a></h2>
+					<div style="float:left; width:45%">
+					<p><span style="color:#f05033;">Git</span></p>
+					<ul>
+						<li><a href="https://try.github.io/levels/1/challenges/1">TryGit</a>: enter commands in-browser!</li>
+						<li><a href="http://rogerdudler.github.io/git-guide/">Git: The Simple Guide</a>: step-by-step Git tutorial</li>
+						<li><a href="http://think-like-a-git.net/">Think Like A Git</a>: for someone who's been using Git, but doesn't feel they really understand it.</li>
+					</ul>
+					</div>
 					
-					<!--SPEAKER NOTES-->
-					<aside class="notes">
-						Avoid making a mess and losing track of things! https://github.com/JonasAtWork/jonasatwork.github.io
-					</aside>
+					<div style="float:right; width:45%">
+					<p><span style="color:#79dbf2;">GitHub</span></p>
+					<ul>
+						<li><a href="https://guides.github.com/">GitHub Guides</a>: official help docs</li>
+						<li><a href="https://www.youtube.com/c/githubguides">GitHub Training Videos</a>: official video tutorials</li>
+						<li><a href="https://www.lynda.com/GitHub-training-tutorials/1384-0.html">Lynda.com</a>: free tutorials with NYU credentials</li>
+					</ul>
+					</div>
 				</section>	
+				
+				
+				<!-- CONCLUSION SLIDE -->
+				<section>
+					<h2>Thank you! Questions?</h2><br/>
+					
+					<p>Email me: <a href="mailto:vicky.steeves@nyu.edu">vicky.steeves@nyu.edu</a></p>
+					<p>Learn more about RDM: <a href="http://guides.nyu.edu/data_management">guides.nyu.edu/data_management</a></p>
+
+					<p>Get this presentation: <a href="http://guides.nyu.edu/data_management/resources">guides.nyu.edu/data_management/resources</a></p>
+					<p>Make an appointment: <a href="http://guides.nyu.edu/appointment">guides.nyu.edu/appointment</a></p>
+					
+					<div class='footer'>
+						<hr/>
+						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a><br/>
+						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+					</div>
 			</div>
 		</div>
 
