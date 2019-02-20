@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro Git & GitHub</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2>Introduction to <strong><span style="color:#f05033;">Git</span></strong>  & <span style="color:#79dbf2;">GitHub</span><br/></h2>
+
+					<p>Vicky Steeves | February 20, 2019</p>
+
+					<img src="imgs/dataservices.png" width="30%" height="30%" align="middle"><br/>
+
+					<div class='footer'>
+						<hr/>
+						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a><br/>
+						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+					</div>
+				</section>
+
+                <section>
+					<h2>Before we can work on our partner's repo, we need to set up git</h2>
+                    <p>Let's get on the command line and start!</p>
+					<ul>
+						<li>On Windows, in the start menu search, type <mark>Git Bash</mark></li>
+						<li>On Mac OSX, search <mark>terminal</mark> from spotlight search</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Setting Up Git</h2>
+					<div style="text-align:left;"><p>When the terminal is open, type the following as separate commands:</p>
+
+					<pre><code>
+git config --global user.name "Vicky Steeves"
+git config --global user.email "vicky.steeves@nyu.edu"
+git config --global color.ui "auto"
+git config --global core.editor "gedit"
+git config --list # lists your configurations
+					</pre></code>
+
+					<p>Where it says <mark>core.editor</mark>, put in your favourite plain text editor. This could be simply Notepad (Windows) or TextWrangler (Mac), but NOT Word.</p></div>
+				</section>
+
+                <section>
+                    <h2>Getting the central repository:</h2>
+
+                     <p>Git calls copying a remote repository to your local computer <mark>cloning</mark>. Person B: clone person A's repository:</p>
+
+                    <pre><code>
+cd Desktop # or wherever you want to put the repository
+git clone LINK
+cd repository-name # go into your new repository
+                    </pre></code>
+
+                    <p>To get the link, click the big green button in the repository on GitHub & make sure you select it with HTTPS:</p>
+                    <img src="imgs/clone.png">
+				</section>
+
+				<section>
+					<h2>Let's change a file locally!</h2>
+
+					<ol>
+						<li>Open the README with a text editor (not Word!).</li>
+						<li>Add some new text to the README, or delete some text!</li>
+						<li>Go back to the command line.</li>
+					</ol>
+
+					<p>Type the following as separate commands:</p>
+
+					<pre><code>
+git add hi.txt
+git status
+					</pre></code>
+
+                    <p>We are telling git that we want to track any changes we make to our REAMDE -- so we use <code>git add</code>. This adds the README file to the staging area (where git checks for file changes). </p>
+				</section>
+
+				<section>
+					<h2>Adding our README</h2>
+
+					<p>You should see something that looks like this:</p>
+
+					<img src="imgs/git-add-status.png" align="middle">
+
+                    <p>The filename <code>README.md</code> should be green now, which is git visually cueing us to the fact that there is a new file waiting for us to commit to it!</p>
+				</section>
+
+				<section>
+					<h2>Committing our Text File</h2>
+
+					<p>Let's commit so Git officially records this as our changes!</p>
+
+					<pre><code>
+git commit -m "updated license info"
+git status
+					</pre></code>
+
+					<p>You should see something that looks like this:</p>
+
+					<img src="imgs/git-commit-status.png" align="middle">
+
+                    <p>We now have a permanent record of what was changed, along with who made the commit and at what time.</p>
+				</section>
+
+				<section>
+					<h2>Now try it on your own!</h2><br/>
+
+					<ol>
+						<li>Modify the README file in your <mark>hello-world</mark> folder.</li>
+						<li>Add it and commit it.</li>
+					</ol>
+				</section>
+
+                <section>
+                    <h2>Git workflow</h2>
+                    <p>When working locally, you'll usually always follow this flow:</p>
+                    <ul>
+                        <li>Make changes, add files, add data, whatever</li>
+                        <li>git add <file names></li>
+                        <li>git commit -m "descriptive commit msg"</li>
+                    </ul>
+                </section>
+
+				<section>
+                    <h2>Syncing our changes with the central repo</h2>
+                    <p>Now that we made some changes to our repository locally, we need to make sure our partner has access to those changes too! For this, we add one command to our flow, <code>git push</code>, which pushes our local changes to GitHub or wherever we are hosting our git repository!</p>
+
+                    <pre><code>
+git add -A # shortcut to stage all your files
+git commit -m "descriptive msg" #add a new file to the repo
+git push origin master # send these changes to the central repo
+                    </pre></code>
+
+                     <p>Go refresh your browser to see your changes!</p>
+                </section>
+
+                <section>
+                    <h2>Only one more command...</h2>
+                    <p> So Person A has cloned the repo, made changes, and pushed back the central repo. What if Person B also wants to keep their local copy in sync? Then, they use <code>git pull</code> to download the new changes!</p>
+                    <pre><code>
+git pull origin master
+                    </pre></code>
+
+                    <p>Then navigate to your own local copy to see the new changes!</p>
+                </section>
+
+                <section>
+                    <h2>Recap</h2>
+                    <p>In this lesson, you have:</p>
+                    <ol>
+                        <li>Created a GitHub repository</li>
+                        <li>Forked my repo and made your first pull request!</li>
+                        <li>Added a collaborator to your repository</li>
+                        <li>Synced local changes with the central repository between you and your collaborators using git on the terminal</li>
+                    </ol>
+
+                    <img src="https://media.giphy.com/media/msKNSs8rmJ5m/giphy.gif">
+                </section>
+
+                <section>
+                    <h2>Resources For Learning More</h2>
+
+					<div style="float:left; width:45%">
+					<p><span style="color:#f05033;">Git</span></p>
+					<ul>
+						<li><a href="https://try.github.io/levels/1/challenges/1">TryGit</a>: enter commands in-browser!</li>
+						<li><a href="http://rogerdudler.github.io/git-guide/">Git: The Simple Guide</a>: step-by-step Git tutorial</li>
+						<li><a href="http://think-like-a-git.net/">Think Like A Git</a>: for someone who's been using Git, but doesn't feel they really understand it.</li>
+					</ul>
+					</div>
+
+					<div style="float:right; width:45%">
+					<p><span style="color:#79dbf2;">GitHub</span></p>
+					<ul>
+						<li><a href="https://guides.github.com/">GitHub Guides</a>: official help docs</li>
+						<li><a href="https://www.youtube.com/c/githubguides">GitHub Training Videos</a>: official video tutorials</li>
+						<li><a href="https://www.lynda.com/GitHub-training-tutorials/1384-0.html">Lynda.com</a>: free tutorials with NYU credentials</li>
+					</ul>
+					</div>
+				</section>
+
+				<!-- CONCLUSION SLIDE -->
+				<section>
+					<h2>Thank you! Questions?</h2><br/>
+
+					<p>Email me: <a href="mailto:vicky.steeves@nyu.edu">vicky.steeves@nyu.edu</a></p>
+					<p>Learn more about RDM: <a href="http://guides.nyu.edu/data_management">guides.nyu.edu/data_management</a></p>
+
+					<p>Get this presentation: <a href="http://guides.nyu.edu/data_management/resources">guides.nyu.edu/data_management/resources</a></p>
+					<p>Make an appointment: <a href="http://guides.nyu.edu/appointment">guides.nyu.edu/appointment</a></p>
+
+					<div class='footer'>
+						<hr/>
+						<p>Vicky's ORCID: <a href="http://orcid.org/0000-0003-4298-168X/">0000-0003-4298-168X</a><br/>
+						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+					</div>
+				</section>
+            </div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+							// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
