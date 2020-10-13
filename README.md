@@ -10,4 +10,4 @@ Git, GitHub, command line, version control.
 A big big thank you to [Andy Mueller](https://github.com/amueller), who originally taught this class at NYU and taught me all I know about Git and GitHub! These slides are heavily influenced by his previous class materials, [found here](https://github.com/amueller/git_workshop).
 
 
-I am not cut out for coding. I'm afraid this is beyond my wheelhouse.
+I am not cut out for coding. I'm afraid this is beyond my wheelhouse. But I will keep trying
